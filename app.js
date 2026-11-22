@@ -26,7 +26,6 @@ function toplamiGuncelle() {
   document.querySelector("#aylik-toplam").textContent = `${tutar} TL`;
 }
 abonelikler.forEach(listeyeEkle);
-abonelikler.forEach(listeyeEkle);
 toplamiGuncelle(); // Yeni satır
 
 form.addEventListener("submit", (olay) => {
