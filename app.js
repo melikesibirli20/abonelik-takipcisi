@@ -13,9 +13,23 @@ function listeyeEkle(abonelik) {
   satir.textContent = `${abonelik.ad} · ${ucret} TL · Ayın ${abonelik.gun}. günü`;
   liste.append(satir);
 }
+function toplamiGuncelle() {
+  const toplamKurus = abonelikler.reduce((toplam, abonelik) => {
+    return toplam + abonelik.ucretKurus;
+  }, 0);
 
+  const tutar = (toplamKurus / 100).toLocaleString("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+  document.querySelector("#aylik-toplam").textContent = `${tutar} TL`;
+}
 abonelikler.forEach(listeyeEkle);
+abonelikler.forEach(listeyeEkle);
+toplamiGuncelle(); // Yeni satır
 
+form.addEventListener("submit", (olay) => {
 form.addEventListener("submit", (olay) => {
   olay.preventDefault();
 
@@ -35,5 +49,10 @@ form.addEventListener("submit", (olay) => {
   localStorage.setItem(kayitAnahtari, JSON.stringify([...abonelikler, abonelik]));
   abonelikler.push(abonelik);
   listeyeEkle(abonelik);
+  abonelikler.push(abonelik);
+  listeyeEkle(abonelik);
+  toplamiGuncelle(); // Yeni satır
+  form.reset();
+});
   form.reset();
 });
