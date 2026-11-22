@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 0 20px;
+  font-family: system-ui, sans-serif;
+  color: #16372d;
+  background: #eff6f2;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 42px);
+}
+
+form,
+#abonelik-listesi {
+  padding: 24px;
+  background: white;
+  border: 1px solid #cddfd6;
+  border-radius: 16px;
+}
+
+form,
+label {
+  display: grid;
+  gap: 8px;
+}
+
+form {
+  gap: 16px;
+}
+
+input,
+button {
+  padding: 12px;
+  border: 1px solid #829d90;
+  border-radius: 8px;
+  font: inherit;
+}
+
+button {
+  background: #176349;
+  color: white;
+  cursor: pointer;
+}
+
+#abonelik-listesi {
+  list-style: none;
+}
+
+#abonelik-listesi:empty {
+  display: none;
+}

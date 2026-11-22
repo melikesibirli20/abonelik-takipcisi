@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abonelik Takipçisi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Abonelik Takipçisi</h1>
+
+  <form id="abonelik-formu">
+    <label>Abonelik adı
+      <input name="ad" required>
+    </label>
+
+    <label>Aylık ücret (TL)
+      <input name="ucret" type="number" min="0.01" step="0.01" required>
+    </label>
+
+    <label>Yenileme günü
+      <input name="gun" type="number" min="1" max="31" required>
+    </label>
+
+    <button type="submit">Abonelik ekle</button>
+  </form>
+
+  <h2>Aboneliklerim</h2>
+  <ul id="abonelik-listesi"></ul>
+<script src="app.js"></script>
+</body>
+</html>
