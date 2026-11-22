@@ -36,10 +36,6 @@ Ardından tarayıcıda \[http://127.0.0.1:8000](http://127.0.0.1:8000) adresini 
 
 
 
-\## İş takip panosu
+## İş takip panosu
 
-
-
-[Abonelik Takipçisi iş takip panosu]
-
-(https://github.com/users/melikesibirli20/projects/2/views/1)
+https://github.com/users/melikesibirli20/projects/2/views/1
